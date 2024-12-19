@@ -1,0 +1,46 @@
+version: 4.1.30
+steps:
+  - prompt: Click on the "Sign In" button.
+    commands:
+      - command: hover-text
+        text: Sign in
+        description: sign in button in the top right corner
+        action: click
+  - prompt: Assert that the sign-in form appears.
+    commands:
+      - command: assert
+        expect: the sign-in form with "Email or phone" field is visible
+  - prompt: Enter test credentials.
+    commands:
+      - command: hover-text
+        text: Email or phone
+        description: email input field on the sign-in page
+        action: click
+      - command: type
+        text: test@example.com
+  - prompt: Enter test credentials.
+    commands:
+      - command: hover-text
+        text: Email or phone
+        description: email input field
+        action: click
+      - command: type
+        text: test@example.com
+      - command: press-keys
+        keys:
+          - tab
+      - command: type
+        text: password123
+  - prompt: Attempt to sign in.
+    commands:
+      - command: hover-text
+        text: Next
+        description: next button on the sign-in form
+        action: click
+  - prompt: >-
+      Assert that the user is either signed in successfully or an error message
+      is displayed for invalid credentials.  # Use the content of the file from
+      the environment
+    commands:
+      - command: assert
+        expect: the page shows "Verify it's you" or an error message is displayed
