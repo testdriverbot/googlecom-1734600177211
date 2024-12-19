@@ -1,0 +1,67 @@
+version: 4.1.30
+steps:
+  - prompt: Open the browser and navigate to the website.
+    commands:
+      - command: hover-text
+        text: Search Google or type a URL
+        description: main google search
+        action: click
+      - command: type
+        text: example.com
+      - command: press-keys
+        keys:
+          - enter
+  - prompt: Open the browser and navigate to the website.
+    commands:
+      - command: hover-text
+        text: Search Google or type a URL
+        description: main google search
+        action: click
+      - command: type
+        text: example.com
+      - command: press-keys
+        keys:
+          - enter
+  - prompt: Open the browser and navigate to the website.
+    commands:
+      - command: hover-text
+        text: Search Google or type a URL
+        description: main google search
+        action: click
+      - command: type
+        text: example.com
+      - command: press-keys
+        keys:
+          - enter
+  - prompt: Open the browser and navigate to the website.
+    commands:
+      - command: hover-text
+        text: Search Google or type a URL
+        description: main google search
+        action: click
+      - command: type
+        text: example.com
+      - command: press-keys
+        keys:
+          - enter
+  - prompt: Open the browser and navigate to the website.
+    commands:
+      - command: hover-text
+        text: google.com
+        description: address bar with current URL
+        action: click
+      - command: type
+        text: example.com
+      - command: press-keys
+        keys:
+          - enter
+  - prompt: Assert that the webpage loads successfully.
+    commands:
+      - command: assert
+        expect: the text "Example Domain" is visible on the webpage
+  - prompt: >-
+      Assert that the logo is visible on the page.  # Use the content of the
+      file from the environment
+    commands:
+      - command: assert
+        expect: the logo image is visible on the webpage
