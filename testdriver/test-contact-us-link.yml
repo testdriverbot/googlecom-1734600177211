@@ -1,0 +1,37 @@
+version: 4.1.30
+steps:
+  - prompt: Find the "Contact Us" link on the homepage.
+    commands:
+      - command: scroll
+        direction: down
+  - prompt: Find the "Contact Us" link on the homepage.
+    commands:
+      - command: hover-text
+        text: Search Google or type a URL
+        description: main google search
+        action: click
+      - command: type
+        text: example website contact us
+  - prompt: Find the "Contact Us" link on the homepage.
+    commands:
+      - command: press-keys
+        keys:
+          - enter
+  - prompt: Find the "Contact Us" link on the homepage.
+    commands:
+      - command: hover-text
+        text: About
+        description: about link on the Google homepage
+        action: click
+  - prompt: Find the "Contact Us" link on the homepage.
+    commands:
+      - command: scroll
+        direction: down
+  - prompt: Find the "Contact Us" link on the homepage.
+    commands:
+      - command: scroll
+        direction: down
+  - prompt: Find the "Contact Us" link on the homepage.
+    commands:
+      - command: scroll
+        direction: down
